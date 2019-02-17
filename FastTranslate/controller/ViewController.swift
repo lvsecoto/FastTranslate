@@ -8,16 +8,31 @@
 
 import Cocoa
 
-class MainViewController: NSViewController {
+class MainViewController:
+    NSViewController &
+    NSTextFieldDelegate &
+    TranslateModelDelegate
+{
 
     @IBOutlet weak var queryTextField: NSTextField!
     
     @IBOutlet weak var resultLabel: NSTextField!
     
+    private var translateModel = TranslateModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        translateModel.delegate = self
+        queryTextField.delegate = self
+    }
+    
+    func controlTextDidChange(_ obj: Notification) {
+        let query = (obj.object as! NSTextField).stringValue
+        translateModel.translate(query: query)
+    }
+    
+    func didGetResult(stringResult: String) {
+        resultLabel.stringValue = stringResult
     }
 
     override var representedObject: Any? {

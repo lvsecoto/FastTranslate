@@ -10,6 +10,10 @@ import Cocoa
 
 class MainViewController: NSViewController {
 
+    @IBOutlet weak var queryTextField: NSTextField!
+    
+    @IBOutlet weak var resultLabel: NSTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

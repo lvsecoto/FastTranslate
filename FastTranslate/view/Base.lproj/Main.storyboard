@@ -685,13 +685,44 @@
             <objects>
                 <viewController identifier="MainViewController" storyboardIdentifier="MainViewController" id="XfG-lQ-9wD" customClass="MainViewController" customModule="FastTranslate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="304" height="322"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cIq-on-nYm">
+                                <rect key="frame" x="16" y="284" width="272" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="iiE-U6-rGq">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Nmw-En-pYc">
+                                <rect key="frame" x="14" y="243" width="276" height="17"/>
+                                <textFieldCell key="cell" selectable="YES" title="翻译结果" id="rql-mh-7uU">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Nmw-En-pYc" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="7zR-s6-Aeb"/>
+                            <constraint firstItem="cIq-on-nYm" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="Kwv-eP-oeN"/>
+                            <constraint firstItem="Nmw-En-pYc" firstAttribute="top" secondItem="cIq-on-nYm" secondAttribute="bottom" constant="24" id="ZH3-8i-7Ad"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Nmw-En-pYc" secondAttribute="bottom" constant="16" id="cgk-X8-FMG"/>
+                            <constraint firstAttribute="trailing" secondItem="Nmw-En-pYc" secondAttribute="trailing" constant="16" id="m4Y-0A-2Xv"/>
+                            <constraint firstAttribute="trailing" secondItem="cIq-on-nYm" secondAttribute="trailing" constant="16" id="wP4-zl-dMP"/>
+                            <constraint firstItem="cIq-on-nYm" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="16" id="y8e-s2-msB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="queryTextField" destination="cIq-on-nYm" id="VAr-at-FMo"/>
+                        <outlet property="resultLabel" destination="Nmw-En-pYc" id="SkR-bb-W9D"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="-13" y="681"/>
         </scene>
     </scenes>
 </document>

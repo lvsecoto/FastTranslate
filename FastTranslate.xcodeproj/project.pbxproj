@@ -136,10 +136,10 @@
 		E63FFA2922197A12004C14C2 /* FastTranslate */ = {
 			isa = PBXGroup;
 			children = (
+				E63FFA572219AAD9004C14C2 /* view */,
 				E63FFA562219976F004C14C2 /* controller */,
 				E63FFA2A22197A12004C14C2 /* AppDelegate.swift */,
 				E63FFA2E22197A13004C14C2 /* Assets.xcassets */,
-				E63FFA3022197A13004C14C2 /* Main.storyboard */,
 				E63FFA3322197A13004C14C2 /* Info.plist */,
 				E63FFA3422197A13004C14C2 /* FastTranslate.entitlements */,
 			);
@@ -170,6 +170,14 @@
 				E63FFA2C22197A12004C14C2 /* ViewController.swift */,
 			);
 			path = controller;
+			sourceTree = "<group>";
+		};
+		E63FFA572219AAD9004C14C2 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E63FFA3022197A13004C14C2 /* Main.storyboard */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

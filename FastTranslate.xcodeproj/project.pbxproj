@@ -1,0 +1,727 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BC3CF1EB22D70E261627667 /* Pods_FastTranslate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7231DF380FEFE5C11E810BDA /* Pods_FastTranslate.framework */; };
+		83D57135DB94459982AAA945 /* Pods_FastTranslateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4A5B2978EC7319B7E7F8C1 /* Pods_FastTranslateUITests.framework */; };
+		DE0D219687102EDF07DB3FA0 /* Pods_FastTranslateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43A99C95AD4ADF0E4F145EB0 /* Pods_FastTranslateTests.framework */; };
+		E63FFA2B22197A12004C14C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63FFA2A22197A12004C14C2 /* AppDelegate.swift */; };
+		E63FFA2D22197A12004C14C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63FFA2C22197A12004C14C2 /* ViewController.swift */; };
+		E63FFA2F22197A13004C14C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E63FFA2E22197A13004C14C2 /* Assets.xcassets */; };
+		E63FFA3222197A13004C14C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E63FFA3022197A13004C14C2 /* Main.storyboard */; };
+		E63FFA3E22197A13004C14C2 /* FastTranslateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63FFA3D22197A13004C14C2 /* FastTranslateTests.swift */; };
+		E63FFA4922197A13004C14C2 /* FastTranslateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63FFA4822197A13004C14C2 /* FastTranslateUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E63FFA3A22197A13004C14C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E63FFA1F22197A12004C14C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E63FFA2622197A12004C14C2;
+			remoteInfo = FastTranslate;
+		};
+		E63FFA4522197A13004C14C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E63FFA1F22197A12004C14C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E63FFA2622197A12004C14C2;
+			remoteInfo = FastTranslate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D142FF02A4052C97FDE480B /* Pods-FastTranslateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastTranslateTests.debug.xcconfig"; path = "Target Support Files/Pods-FastTranslateTests/Pods-FastTranslateTests.debug.xcconfig"; sourceTree = "<group>"; };
+		261A22D3499537C12F278BA1 /* Pods-FastTranslate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastTranslate.release.xcconfig"; path = "Target Support Files/Pods-FastTranslate/Pods-FastTranslate.release.xcconfig"; sourceTree = "<group>"; };
+		3E4A5B2978EC7319B7E7F8C1 /* Pods_FastTranslateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastTranslateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43A99C95AD4ADF0E4F145EB0 /* Pods_FastTranslateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastTranslateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7231DF380FEFE5C11E810BDA /* Pods_FastTranslate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastTranslate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FF1BE0120C32FE36B86B840 /* Pods-FastTranslateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastTranslateUITests.debug.xcconfig"; path = "Target Support Files/Pods-FastTranslateUITests/Pods-FastTranslateUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		953B61B53BEDC4DE24700A23 /* Pods-FastTranslateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastTranslateTests.release.xcconfig"; path = "Target Support Files/Pods-FastTranslateTests/Pods-FastTranslateTests.release.xcconfig"; sourceTree = "<group>"; };
+		ABFC268E2CFC927303AB1EB1 /* Pods-FastTranslate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastTranslate.debug.xcconfig"; path = "Target Support Files/Pods-FastTranslate/Pods-FastTranslate.debug.xcconfig"; sourceTree = "<group>"; };
+		C798E1E40C642919310AE9D1 /* Pods-FastTranslateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastTranslateUITests.release.xcconfig"; path = "Target Support Files/Pods-FastTranslateUITests/Pods-FastTranslateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E63FFA2722197A12004C14C2 /* FastTranslate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastTranslate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E63FFA2A22197A12004C14C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E63FFA2C22197A12004C14C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E63FFA2E22197A13004C14C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E63FFA3122197A13004C14C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E63FFA3322197A13004C14C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E63FFA3422197A13004C14C2 /* FastTranslate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FastTranslate.entitlements; sourceTree = "<group>"; };
+		E63FFA3922197A13004C14C2 /* FastTranslateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastTranslateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E63FFA3D22197A13004C14C2 /* FastTranslateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastTranslateTests.swift; sourceTree = "<group>"; };
+		E63FFA3F22197A13004C14C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E63FFA4422197A13004C14C2 /* FastTranslateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastTranslateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E63FFA4822197A13004C14C2 /* FastTranslateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastTranslateUITests.swift; sourceTree = "<group>"; };
+		E63FFA4A22197A13004C14C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E63FFA2422197A12004C14C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BC3CF1EB22D70E261627667 /* Pods_FastTranslate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E63FFA3622197A13004C14C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE0D219687102EDF07DB3FA0 /* Pods_FastTranslateTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E63FFA4122197A13004C14C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83D57135DB94459982AAA945 /* Pods_FastTranslateUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10E545B0AF955CED734BDFED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7231DF380FEFE5C11E810BDA /* Pods_FastTranslate.framework */,
+				43A99C95AD4ADF0E4F145EB0 /* Pods_FastTranslateTests.framework */,
+				3E4A5B2978EC7319B7E7F8C1 /* Pods_FastTranslateUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48EF42086C593D05E7304BD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABFC268E2CFC927303AB1EB1 /* Pods-FastTranslate.debug.xcconfig */,
+				261A22D3499537C12F278BA1 /* Pods-FastTranslate.release.xcconfig */,
+				1D142FF02A4052C97FDE480B /* Pods-FastTranslateTests.debug.xcconfig */,
+				953B61B53BEDC4DE24700A23 /* Pods-FastTranslateTests.release.xcconfig */,
+				7FF1BE0120C32FE36B86B840 /* Pods-FastTranslateUITests.debug.xcconfig */,
+				C798E1E40C642919310AE9D1 /* Pods-FastTranslateUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E63FFA1E22197A12004C14C2 = {
+			isa = PBXGroup;
+			children = (
+				E63FFA2922197A12004C14C2 /* FastTranslate */,
+				E63FFA3C22197A13004C14C2 /* FastTranslateTests */,
+				E63FFA4722197A13004C14C2 /* FastTranslateUITests */,
+				E63FFA2822197A12004C14C2 /* Products */,
+				48EF42086C593D05E7304BD1 /* Pods */,
+				10E545B0AF955CED734BDFED /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E63FFA2822197A12004C14C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E63FFA2722197A12004C14C2 /* FastTranslate.app */,
+				E63FFA3922197A13004C14C2 /* FastTranslateTests.xctest */,
+				E63FFA4422197A13004C14C2 /* FastTranslateUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E63FFA2922197A12004C14C2 /* FastTranslate */ = {
+			isa = PBXGroup;
+			children = (
+				E63FFA562219976F004C14C2 /* controller */,
+				E63FFA2A22197A12004C14C2 /* AppDelegate.swift */,
+				E63FFA2E22197A13004C14C2 /* Assets.xcassets */,
+				E63FFA3022197A13004C14C2 /* Main.storyboard */,
+				E63FFA3322197A13004C14C2 /* Info.plist */,
+				E63FFA3422197A13004C14C2 /* FastTranslate.entitlements */,
+			);
+			path = FastTranslate;
+			sourceTree = "<group>";
+		};
+		E63FFA3C22197A13004C14C2 /* FastTranslateTests */ = {
+			isa = PBXGroup;
+			children = (
+				E63FFA3D22197A13004C14C2 /* FastTranslateTests.swift */,
+				E63FFA3F22197A13004C14C2 /* Info.plist */,
+			);
+			path = FastTranslateTests;
+			sourceTree = "<group>";
+		};
+		E63FFA4722197A13004C14C2 /* FastTranslateUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E63FFA4822197A13004C14C2 /* FastTranslateUITests.swift */,
+				E63FFA4A22197A13004C14C2 /* Info.plist */,
+			);
+			path = FastTranslateUITests;
+			sourceTree = "<group>";
+		};
+		E63FFA562219976F004C14C2 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				E63FFA2C22197A12004C14C2 /* ViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E63FFA2622197A12004C14C2 /* FastTranslate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E63FFA4D22197A13004C14C2 /* Build configuration list for PBXNativeTarget "FastTranslate" */;
+			buildPhases = (
+				09D4B62FD031690B37D3A3DB /* [CP] Check Pods Manifest.lock */,
+				E63FFA2322197A12004C14C2 /* Sources */,
+				E63FFA2422197A12004C14C2 /* Frameworks */,
+				E63FFA2522197A12004C14C2 /* Resources */,
+				2E931CE7A24385E46986253C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FastTranslate;
+			productName = FastTranslate;
+			productReference = E63FFA2722197A12004C14C2 /* FastTranslate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E63FFA3822197A13004C14C2 /* FastTranslateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E63FFA5022197A13004C14C2 /* Build configuration list for PBXNativeTarget "FastTranslateTests" */;
+			buildPhases = (
+				9032CCFE8593CF65B14FCEA1 /* [CP] Check Pods Manifest.lock */,
+				E63FFA3522197A13004C14C2 /* Sources */,
+				E63FFA3622197A13004C14C2 /* Frameworks */,
+				E63FFA3722197A13004C14C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E63FFA3B22197A13004C14C2 /* PBXTargetDependency */,
+			);
+			name = FastTranslateTests;
+			productName = FastTranslateTests;
+			productReference = E63FFA3922197A13004C14C2 /* FastTranslateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E63FFA4322197A13004C14C2 /* FastTranslateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E63FFA5322197A13004C14C2 /* Build configuration list for PBXNativeTarget "FastTranslateUITests" */;
+			buildPhases = (
+				F8F1FA69BC33EEDC8E6CBFCB /* [CP] Check Pods Manifest.lock */,
+				E63FFA4022197A13004C14C2 /* Sources */,
+				E63FFA4122197A13004C14C2 /* Frameworks */,
+				E63FFA4222197A13004C14C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E63FFA4622197A13004C14C2 /* PBXTargetDependency */,
+			);
+			name = FastTranslateUITests;
+			productName = FastTranslateUITests;
+			productReference = E63FFA4422197A13004C14C2 /* FastTranslateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E63FFA1F22197A12004C14C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = lvsecoto;
+				TargetAttributes = {
+					E63FFA2622197A12004C14C2 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					E63FFA3822197A13004C14C2 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = E63FFA2622197A12004C14C2;
+					};
+					E63FFA4322197A13004C14C2 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = E63FFA2622197A12004C14C2;
+					};
+				};
+			};
+			buildConfigurationList = E63FFA2222197A12004C14C2 /* Build configuration list for PBXProject "FastTranslate" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E63FFA1E22197A12004C14C2;
+			productRefGroup = E63FFA2822197A12004C14C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E63FFA2622197A12004C14C2 /* FastTranslate */,
+				E63FFA3822197A13004C14C2 /* FastTranslateTests */,
+				E63FFA4322197A13004C14C2 /* FastTranslateUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E63FFA2522197A12004C14C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63FFA2F22197A13004C14C2 /* Assets.xcassets in Resources */,
+				E63FFA3222197A13004C14C2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E63FFA3722197A13004C14C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E63FFA4222197A13004C14C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09D4B62FD031690B37D3A3DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FastTranslate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E931CE7A24385E46986253C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FastTranslate/Pods-FastTranslate-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FastTranslate/Pods-FastTranslate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9032CCFE8593CF65B14FCEA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FastTranslateTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8F1FA69BC33EEDC8E6CBFCB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FastTranslateUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E63FFA2322197A12004C14C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63FFA2D22197A12004C14C2 /* ViewController.swift in Sources */,
+				E63FFA2B22197A12004C14C2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E63FFA3522197A13004C14C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63FFA3E22197A13004C14C2 /* FastTranslateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E63FFA4022197A13004C14C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63FFA4922197A13004C14C2 /* FastTranslateUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E63FFA3B22197A13004C14C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E63FFA2622197A12004C14C2 /* FastTranslate */;
+			targetProxy = E63FFA3A22197A13004C14C2 /* PBXContainerItemProxy */;
+		};
+		E63FFA4622197A13004C14C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E63FFA2622197A12004C14C2 /* FastTranslate */;
+			targetProxy = E63FFA4522197A13004C14C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E63FFA3022197A13004C14C2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E63FFA3122197A13004C14C2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E63FFA4B22197A13004C14C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E63FFA4C22197A13004C14C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		E63FFA4E22197A13004C14C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABFC268E2CFC927303AB1EB1 /* Pods-FastTranslate.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FastTranslate/FastTranslate.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FastTranslate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lvsecoto.FastTranslate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		E63FFA4F22197A13004C14C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 261A22D3499537C12F278BA1 /* Pods-FastTranslate.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FastTranslate/FastTranslate.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FastTranslate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lvsecoto.FastTranslate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		E63FFA5122197A13004C14C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D142FF02A4052C97FDE480B /* Pods-FastTranslateTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FastTranslateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lvsecoto.FastTranslateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FastTranslate.app/Contents/MacOS/FastTranslate";
+			};
+			name = Debug;
+		};
+		E63FFA5222197A13004C14C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 953B61B53BEDC4DE24700A23 /* Pods-FastTranslateTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FastTranslateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lvsecoto.FastTranslateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FastTranslate.app/Contents/MacOS/FastTranslate";
+			};
+			name = Release;
+		};
+		E63FFA5422197A13004C14C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FF1BE0120C32FE36B86B840 /* Pods-FastTranslateUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FastTranslateUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lvsecoto.FastTranslateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = FastTranslate;
+			};
+			name = Debug;
+		};
+		E63FFA5522197A13004C14C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C798E1E40C642919310AE9D1 /* Pods-FastTranslateUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FastTranslateUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lvsecoto.FastTranslateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = FastTranslate;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E63FFA2222197A12004C14C2 /* Build configuration list for PBXProject "FastTranslate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E63FFA4B22197A13004C14C2 /* Debug */,
+				E63FFA4C22197A13004C14C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E63FFA4D22197A13004C14C2 /* Build configuration list for PBXNativeTarget "FastTranslate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E63FFA4E22197A13004C14C2 /* Debug */,
+				E63FFA4F22197A13004C14C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E63FFA5022197A13004C14C2 /* Build configuration list for PBXNativeTarget "FastTranslateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E63FFA5122197A13004C14C2 /* Debug */,
+				E63FFA5222197A13004C14C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E63FFA5322197A13004C14C2 /* Build configuration list for PBXNativeTarget "FastTranslateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E63FFA5422197A13004C14C2 /* Debug */,
+				E63FFA5522197A13004C14C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E63FFA1F22197A12004C14C2 /* Project object */;
+}

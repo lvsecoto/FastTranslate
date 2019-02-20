@@ -7,11 +7,13 @@
 //
 
 import Cocoa
+import RxCocoa
 
 class MainViewController:
-    NSViewController &
-    NSTextFieldDelegate &
-    TranslateModelDelegate
+    NSViewController
+//    &
+//    NSTextFieldDelegate &
+//    TranslateModelDelegate
 {
 
     @IBOutlet weak var queryTextField: NSTextField!
@@ -19,21 +21,22 @@ class MainViewController:
     @IBOutlet weak var resultLabel: NSTextField!
     
     private var translateModel = TranslateModel()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        translateModel.delegate = self
-        queryTextField.delegate = self
+        translateModel.input = queryTextField.rx.text.asObservable()
+        
+        translateModel.translate.bind(to: resultLabel.rx.text)
     }
     
-    func controlTextDidChange(_ obj: Notification) {
-        let query = (obj.object as! NSTextField).stringValue
-        translateModel.translate(query: query)
-    }
-    
-    func didGetResult(stringResult: String) {
-        resultLabel.stringValue = stringResult
-    }
+//    func controlTextDidChange(_ obj: Notification) {
+//        let query = (obj.object as! NSTextField).stringValue
+//        translateModel.translate(query: query)
+//    }
+//
+//    func didGetResult(stringResult: String) {
+//        resultLabel.stringValue = stringResult
+//    }
 
     override var representedObject: Any? {
         didSet {

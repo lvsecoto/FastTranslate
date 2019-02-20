@@ -9,6 +9,8 @@ target 'FastTranslate' do
   # Pods for FastTranslate
   pod 'Alamofire', '~> 5.0.0-beta.2'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
 
   target 'FastTranslateTests' do
     inherit! :search_paths

@@ -61,6 +61,7 @@
 		E63FFA4422197A13004C14C2 /* FastTranslateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastTranslateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E63FFA4822197A13004C14C2 /* FastTranslateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastTranslateUITests.swift; sourceTree = "<group>"; };
 		E63FFA4A22197A13004C14C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6949DE2221A97D800CE5828 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E6E681B32219B02900CB0007 /* TkCaculateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TkCaculateUtils.swift; sourceTree = "<group>"; };
 		E6E681B62219B09D00CB0007 /* TkCaculateUtilsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TkCaculateUtilsTest.swift; sourceTree = "<group>"; };
 		E6E681B92219B12900CB0007 /* TranslateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateModel.swift; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 		E63FFA2922197A12004C14C2 /* FastTranslate */ = {
 			isa = PBXGroup;
 			children = (
+				E6949DE1221A97C800CE5828 /* spike */,
 				E6E681B82219B11500CB0007 /* Model */,
 				E6E681B22219AFC100CB0007 /* utils */,
 				E63FFA572219AAD9004C14C2 /* view */,
@@ -187,6 +189,14 @@
 				E63FFA3022197A13004C14C2 /* Main.storyboard */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		E6949DE1221A97C800CE5828 /* spike */ = {
+			isa = PBXGroup;
+			children = (
+				E6949DE2221A97D800CE5828 /* MyPlayground.playground */,
+			);
+			path = spike;
 			sourceTree = "<group>";
 		};
 		E6E681B22219AFC100CB0007 /* utils */ = {
@@ -375,6 +385,9 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FastTranslate/Pods-FastTranslate-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -382,6 +395,9 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

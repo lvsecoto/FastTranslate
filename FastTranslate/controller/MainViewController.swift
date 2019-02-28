@@ -36,7 +36,7 @@ class MainViewController:
         
         translateModel.translate
             .subscribe(onNext: {result in
-                self.translateResult = result
+                self.translateResult = result.translation
             })
             .disposed(by: disposeBag)
 
@@ -63,8 +63,8 @@ class MainViewController:
             withIdentifier: NSUserInterfaceItemIdentifier(
                 rawValue: "idResultCell"
             ),
-            owner: self) as? ResultCellView {
-            resultCell.result = self.translateResult
+            owner: nil) as? ResultCellView {
+            resultCell.textResult.stringValue = self.translateResult ?? ""
             return resultCell
         } else {
             return nil

@@ -702,7 +702,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="379" height="272"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" selectionHighlightStyle="none" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="115" rowSizeStyle="automatic" viewBased="YES" floatsGroupRows="NO" id="Dz7-yV-tiJ">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="115" rowSizeStyle="automatic" viewBased="YES" floatsGroupRows="NO" id="Dz7-yV-tiJ">
                                             <rect key="frame" x="0.0" y="0.0" width="379" height="272"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -727,8 +727,8 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField identifier="cellId" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tuf-bi-gfl">
-                                                                    <rect key="frame" x="14" y="86" width="37" height="17"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="Duh-Kn-lJD">
+                                                                    <rect key="frame" x="14" y="86" width="211" height="17"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Result" id="Duh-Kn-lJD">
                                                                         <font key="font" usesAppearanceFont="YES"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -739,7 +739,7 @@
                                                                 <constraint firstItem="tuf-bi-gfl" firstAttribute="top" secondItem="8Xw-Xt-e8U" secondAttribute="top" constant="12" id="IZu-ON-N9t"/>
                                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tuf-bi-gfl" secondAttribute="bottom" constant="12" id="qSC-S4-1N2"/>
                                                                 <constraint firstItem="tuf-bi-gfl" firstAttribute="leading" secondItem="8Xw-Xt-e8U" secondAttribute="leading" constant="16" id="v3J-NN-9qQ"/>
-                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tuf-bi-gfl" secondAttribute="trailing" constant="12" id="z5m-Lo-VU6"/>
+                                                                <constraint firstAttribute="trailing" secondItem="tuf-bi-gfl" secondAttribute="trailing" constant="12" id="z5m-Lo-VU6"/>
                                                             </constraints>
                                                             <connections>
                                                                 <outlet property="result" destination="tuf-bi-gfl" id="pVF-1c-Vzm"/>

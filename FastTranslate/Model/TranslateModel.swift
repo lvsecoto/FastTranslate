@@ -11,8 +11,6 @@ import Alamofire
 import SwiftyJSON
 import RxSwift
 
-
-
 class TranslateModel {
     
     var input: Observable<String?>? = nil
@@ -74,19 +72,22 @@ class TranslateModel {
     /// 获取翻译结果
     lazy var translate = Observable.zip(query, tkk) { query, tkk in
         (query!, tkk)
-        }.concatMap { (query, tkk) in
+        }
+        .concatMap { (query, tkk) in
             return self.requestTranslate(query: query, tk: calcHash(query,tkk))
-    }
+        }.map { data in
+            return TranslateResult(from: try! JSON(data: data))
+        }
 
     /// 请求翻译
-    private func requestTranslate(query: String, tk: String) -> Observable<String> {
+    private func requestTranslate(query: String, tk: String) -> Observable<Data> {
         let headerTranslate : HTTPHeaders = [
             "Accept-Language" : "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
             "Accept-Encoding" : "gzip, deflate, br",
             "User-Agent" : "Mozilla/5.0",
         ]
 
-        return Observable<String>.create { observable in
+        return Observable<Data>.create { observable in
             AF.request(
                 self.makeRequestUrl(self.urlEncode(query: query), tk),
                 method: .get,
@@ -94,10 +95,12 @@ class TranslateModel {
                 ).responseData { response in
                     if response.result.isSuccess {
                         if let data = response.result.value {
-                            let json: JSON = JSON(data)
-                            observable.onNext(
-                                json[0][0][0].stringValue
-                            )
+//                            let json: JSON = JSON(data)
+//                            observable.onNext(
+//                                json[0][0][0].stringValue
+//                            )
+//                            observable.onCompleted()
+                            observable.onNext(data)
                             observable.onCompleted()
                         }
                     }

@@ -12,9 +12,4 @@ class ResultCellView: NSTableCellView {
 
     @IBOutlet weak var textResult: NSTextField!
     
-    var result : String? = nil {
-        didSet {
-            textResult.stringValue = result ?? ""
-        }
-    }
 }

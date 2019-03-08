@@ -17,8 +17,7 @@ class TranslateModel {
     
     /// 要查询的单词
     private lazy var query: Observable<String?> = input!
-        .debounce(0.5, scheduler: MainScheduler.instance)
-    
+
     /// 获取tkk
     private lazy var tkk = query.concatMap { _ in
         self.getTkk()

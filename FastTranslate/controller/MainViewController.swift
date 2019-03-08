@@ -20,7 +20,8 @@ extension Collection {
 class MainViewController:
     NSViewController,
     NSTableViewDataSource,
-    NSTableViewDelegate
+    NSTableViewDelegate,
+    NSTextFieldDelegate
 {
 
     @IBOutlet weak var container: NSTableView!
@@ -28,6 +29,10 @@ class MainViewController:
     @IBOutlet weak var queryTextField: NSTextField!
     
     private var translateModel = TranslateModel()
+    
+    private var query = PublishSubject<String?>()
+    
+    private var queryRight = PublishSubject<String?>()
     
     private var translateResult : TranslateResult? = nil {
         didSet {
@@ -41,7 +46,12 @@ class MainViewController:
         super.viewDidLoad()
         configureContainer()
 
-        translateModel.input = queryTextField.rx.text.asObservable()
+        queryTextField.delegate = self
+        
+        translateModel.input = Observable.merge(
+            query.debounce(0.5, scheduler: MainScheduler.instance),
+            queryRight
+        )
         translateModel.translate
             .subscribe(onNext: {
                 self.translateResult = $0
@@ -56,6 +66,14 @@ class MainViewController:
         container.sizeLastColumnToFit()
     }
     
+    func controlTextDidChange(_ obj: Notification) {
+        query.onNext(queryTextField.stringValue)
+    }
+    
+    func controlTextDidEndEditing(_ obj: Notification) {
+        queryRight.onNext(queryTextField.stringValue)
+    }
+
     func numberOfRows(in tableView: NSTableView) -> Int {
         let rowOfResult = self.translateResult == nil ? 0 : 1
         let rowOfPartOfSpeach = self.translateResult?.partOfSpeaches.count ?? 0

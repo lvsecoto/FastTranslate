@@ -10,6 +10,13 @@ import Cocoa
 import RxCocoa
 import RxSwift
 
+extension Collection {
+    /// Returns the element at the specified index if it is within bounds, otherwise nil.
+    subscript (safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}
+
 class MainViewController:
     NSViewController,
     NSTableViewDataSource,
@@ -22,7 +29,7 @@ class MainViewController:
     
     private var translateModel = TranslateModel()
     
-    private var translateResult : String? = nil {
+    private var translateResult : TranslateResult? = nil {
         didSet {
             container.reloadData()
         }
@@ -32,15 +39,14 @@ class MainViewController:
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureContainer()
+
         translateModel.input = queryTextField.rx.text.asObservable()
-        
         translateModel.translate
-            .subscribe(onNext: {result in
-                self.translateResult = result.translation
+            .subscribe(onNext: {
+                self.translateResult = $0
             })
             .disposed(by: disposeBag)
-
-        configureContainer()
     }
 
     fileprivate func configureContainer() {
@@ -51,7 +57,9 @@ class MainViewController:
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return 1
+        let rowOfResult = self.translateResult == nil ? 0 : 1
+        let rowOfPartOfSpeach = self.translateResult?.partOfSpeaches.count ?? 0
+        return rowOfResult + rowOfPartOfSpeach
     }
     
     func tableView(_
@@ -59,16 +67,39 @@ class MainViewController:
         viewFor tableColumn: NSTableColumn?,
         row: Int) -> NSView? {
         
-        if let resultCell = tableView.makeView(
-            withIdentifier: NSUserInterfaceItemIdentifier(
-                rawValue: "idResultCell"
-            ),
-            owner: nil) as? ResultCellView {
-            resultCell.textResult.stringValue = self.translateResult ?? ""
+        switch row {
+            
+        case 0:
+            let resultCell = tableView.makeView(
+                withIdentifier: NSUserInterfaceItemIdentifier(
+                    rawValue: "idResultCell"
+                ),
+                owner: nil) as! ResultCellView
+            resultCell.textResult.stringValue = self.translateResult!.translation
             return resultCell
-        } else {
+            
+        case 1...1 + self.translateResult!.partOfSpeaches.count:
+            let partOfSpeachCell = tableView.makeView(
+                withIdentifier: NSUserInterfaceItemIdentifier(
+                    rawValue: "idPartOfSpeachCell"
+                ),
+                owner: nil) as! PartOfSpeachCellView
+            
+            partOfSpeachCell.partOfSpeach.stringValue =
+                self.translateResult!.partOfSpeaches[row - 1].partOfSpeach
+            
+            let details = self.translateResult!.partOfSpeaches[row - 1].translations
+            partOfSpeachCell.details.stringValue =
+                details.reduce("", { (text, detail) -> String in
+                    text + " " + detail
+                })
+
+            return partOfSpeachCell
+            
+        default:
             return nil
         }
+        
     }
     
     override var representedObject: Any? {

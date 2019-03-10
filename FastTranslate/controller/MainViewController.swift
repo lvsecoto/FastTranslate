@@ -10,13 +10,6 @@ import Cocoa
 import RxCocoa
 import RxSwift
 
-extension Collection {
-    /// Returns the element at the specified index if it is within bounds, otherwise nil.
-    subscript (safe index: Index) -> Element? {
-        return indices.contains(index) ? self[index] : nil
-    }
-}
-
 class MainViewController:
     NSViewController,
     NSTableViewDataSource,
@@ -28,11 +21,15 @@ class MainViewController:
     
     @IBOutlet weak var queryTextField: NSTextField!
     
+    @IBOutlet weak var labelTranslateFrom: NSTextField!
+    
+    @IBOutlet weak var labelTranslateTo: NSTextField!
+    
     private var translateModel = TranslateModel()
     
     private var query = PublishSubject<String?>()
     
-    private var queryRight = PublishSubject<String?>()
+    private var queryRightNow = PublishSubject<String?>()
     
     private var translateResult : TranslateResult? = nil {
         didSet {
@@ -49,14 +46,36 @@ class MainViewController:
         queryTextField.delegate = self
         
         translateModel.input = Observable.merge(
-            query.debounce(0.5, scheduler: MainScheduler.instance),
-            queryRight
+            query.debounce(0.3, scheduler: MainScheduler.instance),
+            queryRightNow
         )
+        
         translateModel.translate
             .subscribe(onNext: {
                 self.translateResult = $0
             })
             .disposed(by: disposeBag)
+        
+        translateModel.translation.map { (from, _) -> String in
+                self.getDisplayLanguague(from)
+            }
+            .bind(to: labelTranslateFrom.rx.text)
+            .disposed(by: disposeBag)
+        
+        translateModel.translation.map { (_, to) -> String in
+                self.getDisplayLanguague(to)
+            }
+            .bind(to: labelTranslateTo.rx.text)
+            .disposed(by: disposeBag)
+    }
+    
+    fileprivate func getDisplayLanguague(_ language: String) -> String {
+        switch language {
+        case "en": return "英语"
+        case "zh-CN": return "中文"
+        default:
+            return "无法检测"
+        }
     }
 
     fileprivate func configureContainer() {
@@ -66,12 +85,17 @@ class MainViewController:
         container.sizeLastColumnToFit()
     }
     
+    @IBAction func exchangeTranslateDirection(_ sender: Any) {
+        let (from, to) = try! translateModel.translation.value()
+        translateModel.translation.onNext((to, from))
+    }
+    
     func controlTextDidChange(_ obj: Notification) {
         query.onNext(queryTextField.stringValue)
     }
     
     func controlTextDidEndEditing(_ obj: Notification) {
-        queryRight.onNext(queryTextField.stringValue)
+        queryRightNow.onNext(queryTextField.stringValue)
     }
 
     func numberOfRows(in tableView: NSTableView) -> Int {
@@ -109,7 +133,7 @@ class MainViewController:
             let details = self.translateResult!.partOfSpeaches[row - 1].translations
             partOfSpeachCell.details.stringValue =
                 details.reduce("", { (text, detail) -> String in
-                    text + " " + detail
+                    text + detail + ";  "
                 })
 
             return partOfSpeachCell
@@ -135,6 +159,13 @@ extension MainViewController {
         let identifier = NSStoryboard.SceneIdentifier("MainViewController")
         let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as! MainViewController
         return viewcontroller
+    }
+}
+
+extension Collection {
+    /// Returns the element at the specified index if it is within bounds, otherwise nil.
+    subscript (safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
     }
 }
 
